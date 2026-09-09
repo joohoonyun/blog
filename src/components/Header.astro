@@ -1,0 +1,18 @@
+---
+const nav = [
+  { href: '/', label: 'Posts' },
+  { href: '/series', label: 'Series' },
+  { href: '/about', label: 'About' },
+  { href: 'https://github.com/joohoonyun', label: 'GitHub', external: true },
+];
+---
+<header class="site-header">
+  <a class="brand" href="/">JH.LOG</a>
+  <nav aria-label="Main navigation">
+    {nav.map((item) => (
+      <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
+        {item.label}
+      </a>
+    ))}
+  </nav>
+</header>
